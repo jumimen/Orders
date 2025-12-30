@@ -13,9 +13,9 @@ public class GenericController<T> : Controller where T : class
     }
 
     [HttpGet]
-    public virtual async Task<IActionResult> GetAllAsync()
+    public virtual async Task<IActionResult> GetAsync()
     {
-        var action = await _unitOfWork.GetAllAsync();
+        var action = await _unitOfWork.GetAsync();
         if (action.WasSuccess)
         {
             return Ok(action.Result);

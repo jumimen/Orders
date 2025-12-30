@@ -18,7 +18,7 @@ namespace Orders.Backend.UnitOfWork.Implementations
 
         public virtual async Task<ActionResponse<T>> DeleteAsync(int id) => await _repository.DeleteAsync(id);
 
-        public virtual async Task<ActionResponse<IEnumerable<T>>> GetAllAsync() => await _repository.GetAllAsync();
+        public virtual async Task<ActionResponse<IEnumerable<T>>> GetAsync() => await _repository.GetAsync();
 
         public virtual async Task<ActionResponse<T>> GetAsync(int id) => await _repository.GetAsync(id);
 
